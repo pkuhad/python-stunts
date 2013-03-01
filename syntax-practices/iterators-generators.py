@@ -14,6 +14,12 @@ Built in 'itr' function --
 1
 >>> 
 '''
+def infinite_numbers():
+    count = 0
+    while True:
+        count += 1
+        yield count
+
 
 class MyIterator(object):
         '''
@@ -40,9 +46,15 @@ class MyIterator(object):
 
 if __name__ == "__main__":
         
+        ## Example : Iterator class
         for el in MyIterator(5):
                 print el
 
         # Enumerating iterations
         for i,el in enumerate(MyIterator(5)):
                 print "%d = %d" % (i,el)
+
+        ## Example : Generator     
+        gen = infinite_numbers()
+        print gen.next()
+        print gen.next()

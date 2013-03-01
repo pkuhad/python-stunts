@@ -33,14 +33,22 @@ def remove_non_uppercase_2(stream):
     '''
     return filter(myupper,stream)
 
-## Example 1
+## Example 1 ##
 '''
 If a value of variable is dependent on another then nice way to write inline 'if'
 '''
 b = 11
 a = 5 if b>10 else 6
 
-##
+## Example 2 ##
+'''
+#Source - Learn you a Haskell
+Haskell> [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2, a+b+c == 24]
+So when we are in pythonic mood -
+'''
+[ (a,b,c) for c in range (1,11) for b in range(1,c) for a in range(1,b) if a+b+c==24 if pow(a,2)+pow(b,2)==pow(c,2)]
+#What would happen if 
+[ (a,b,c) for c in range (1,11) if c!= 10 for b in range(1,c) for a in range(1,b) if a+b+c==24 if pow(a,2)+pow(b,2)==pow(c,2)]
 
 
 if __name__ == "__main__":
