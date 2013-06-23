@@ -1,0 +1,9 @@
+*.log
+*.pot
+*.pyc
+local_settings.py
+*.~
+*.un~
+*.sw*
+*.txt~
+*.js~
