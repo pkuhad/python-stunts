@@ -1,4 +1,4 @@
 python-stunts
 =============
 
-An endless desire to improve programming techniques :)
+Programming Experiments with Python
